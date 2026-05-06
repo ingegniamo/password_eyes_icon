@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <template id="custom_login_page" inherit_id="web.login" name="Login Inherit">
-        <xpath expr="//div[.//input[@id='password']]" position="attributes">
-            <attribute name="class">mb-3 field-password position-relative</attribute>
+        <xpath expr="//div[input[@id='password']]" position="attributes">
+            <attribute name="style">position:relative;</attribute>
         </xpath>
         <xpath expr="//input[@id='password']" position="after">
-            <span class="fa fa-eye-slash password-toggle" id="password_toggle_public" style="cursor: pointer;" aria-label="Toggle password visibility" role="button" tabindex="0"/>
+            <span id="password_toggle_public"
+                  class="fa fa-eye-slash"
+                  onclick="var i=document.getElementById('password');i.type=i.type==='password'?'text':'password';this.classList.toggle('fa-eye');this.classList.toggle('fa-eye-slash');"
+                  style="cursor:pointer;position:absolute;right:12px;bottom:8px;color:#6c757d;z-index:10;font-size:16px;"
+                  aria-label="Toggle password visibility"
+                  role="button"
+                  tabindex="0"/>
         </xpath>
     </template>
     

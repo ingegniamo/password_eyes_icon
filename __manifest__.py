@@ -26,9 +26,8 @@ Features:
             'password_eyes_icon/static/src/js/password_eyes_icon_field.js',
             'password_eyes_icon/static/src/xml/password_eyes_icon.xml',
         ],
-        'web.assets_public': [
+        'web.assets_frontend': [
             'password_eyes_icon/static/src/scss/password_eyes_icon.scss',
-            'password_eyes_icon/static/src/js/password_toggle_public.js',
         ],
     },
     'installable': True,
