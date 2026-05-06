@@ -1,25 +1,21 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Password Eyes Icon Widget',
-    'version': '1.0',
-    'summary': 'Adds an eye icon to toggle visibility for password-like fields in Odoo 16.',
+    'version': '1.1',
+    'summary': 'Adds an eye icon to toggle visibility for password fields in Odoo 16.',
     'description': """
-Adds a custom field widget for backend forms and also adds visibility toggle icons 
-to password fields on public Login, Signup, and Reset Password pages.
+Adds a custom field widget for backend forms and a visibility toggle icon
+to the password field on the public Login page.
 
 Features:
 - Backend widget for password fields via 'password_eyes_icon' widget attribute
-- Login page password visibility toggle 
-- Optional support for signup and reset password pages (requires auth_signup module)
-- Fully reusable password toggle functionality
+- Login page password visibility toggle (injects icon on existing input)
     """,
     'category': 'Extra Tools',
     'author': 'Gout',
     'license': 'LGPL-3',
     'depends': [
-        'web', 
-        # 'auth_signup' 
-        # Uncomment this code if you want to show the icon on signup and reset password pages
+        'web',
     ],
     'data': [
         'views/web_templates.xml',
@@ -30,12 +26,8 @@ Features:
             'password_eyes_icon/static/src/js/password_eyes_icon_field.js',
             'password_eyes_icon/static/src/xml/password_eyes_icon.xml',
         ],
-        'web.assets_frontend': [
-            'password_eyes_icon/static/src/scss/password_eyes_icon.scss',
-            'password_eyes_icon/static/src/js/password_toggle_public.js',
-        ],
         'web.assets_public': [
-            'password_eyes_icon/static/src/scss/password_eyes_icon.scss', 
+            'password_eyes_icon/static/src/scss/password_eyes_icon.scss',
             'password_eyes_icon/static/src/js/password_toggle_public.js',
         ],
     },
@@ -45,4 +37,4 @@ Features:
     'images': [
         'static/description/thumbnail.png',
     ],
-} 
+}
